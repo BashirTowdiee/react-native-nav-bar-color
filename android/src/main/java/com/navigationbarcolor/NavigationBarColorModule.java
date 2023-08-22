@@ -1,7 +1,11 @@
 package com.navigationbarcolor;
 
 import androidx.annotation.NonNull;
-
+import android.graphics.Color;
+import android.os.Build;
+import android.view.Window;
+import android.view.WindowManager;
+import java.util.Map;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -22,11 +26,18 @@ public class NavigationBarColorModule extends ReactContextBaseJavaModule {
     return NAME;
   }
 
-
-  // Example method
-  // See https://reactnative.dev/docs/native-modules-android
   @ReactMethod
-  public void multiply(double a, double b, Promise promise) {
-    promise.resolve(a * b);
+  public void setNavigationBarColor(String color) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+      final int parsedColor = Color.parseColor(color);
+      getCurrentActivity().runOnUiThread(new Runnable() {
+        @Override
+        public void run() {
+          Window window = getCurrentActivity().getWindow();
+          window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+          window.setNavigationBarColor(parsedColor);
+        }
+      });
+    }
   }
 }

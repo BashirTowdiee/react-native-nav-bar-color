@@ -17,6 +17,6 @@ const NavigationBarColor = NativeModules.NavigationBarColor
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return NavigationBarColor.multiply(a, b);
+export function setNavigationBarColor(color: string): void {
+  return NavigationBarColor.setNavigationBarColor(color);
 }
