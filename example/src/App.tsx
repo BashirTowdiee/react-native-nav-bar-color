@@ -1,20 +1,13 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-nav-bar-color';
+import { StyleSheet, View } from 'react-native';
+
+import { setNavigationBarColor } from 'react-native-nav-bar-color';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  setNavigationBarColor('#FFFFFF');
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
-  return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
-  );
+  return <View style={styles.container} />;
 }
 
 const styles = StyleSheet.create({
