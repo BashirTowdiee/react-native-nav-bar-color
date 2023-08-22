@@ -53,10 +53,9 @@ Remember to add tests for your change if possible. Run the unit tests by:
 yarn test
 ```
 
-To edit the Objective-C or Swift files, open `example/ios/NavigationBarColorExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-navigation-bar-color`.
+To edit the Objective-C or Swift files, open `example/ios/NavigationBarColorExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-nav-bar-color`.
 
-To edit the Java or Kotlin files, open `example/android` in Android studio and find the source files at `react-native-navigation-bar-color` under `Android`.
-
+To edit the Java or Kotlin files, open `example/android` in Android studio and find the source files at `react-native-nav-bar-color` under `Android`.
 
 ### Commit message convention
 

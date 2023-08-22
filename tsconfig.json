@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-navigation-bar-color": ["./src/index"]
+      "react-native-nav-bar-color": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
