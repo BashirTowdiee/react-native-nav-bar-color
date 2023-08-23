@@ -47,7 +47,7 @@ jobs:
       - name: Build package
         run: yarn prepack
 
-        name: Publish npm
+      - name: Publish npm
       - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
@@ -60,7 +60,6 @@ jobs:
   #       with:
   #         node-version: '18'
   #     - run: yarn install
-
 
   # build-android:
   #   runs-on: ubuntu-latest
