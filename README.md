@@ -11,10 +11,10 @@ npm install react-native-nav-bar-color
 ## Usage
 
 ```js
-import NavigationBarColorModule from 'react-native-nav-bar-color';
+import { setNavigationBarColor } from '@bashir_towdiee/react-native-nav-bar-color';
 
 // Change navigation bar color to red
-NavigationBarColorModule.setNavigationBarColor('#FF0000');
+setNavigationBarColor('#FF0000');
 ```
 
 ## Contributing
@@ -24,7 +24,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
