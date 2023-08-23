@@ -47,17 +47,20 @@ jobs:
       - name: Build package
         run: yarn prepack
 
-  publish-npm:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      - run: yarn install
+        name: Publish npm
       - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
+
+  # publish-npm:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: '18'
+  #     - run: yarn install
+
 
   # build-android:
   #   runs-on: ubuntu-latest
