@@ -1,6 +1,6 @@
 {
   "name": "@bashir_towdiee/react-native-nav-bar-color",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Change the color of the navigation bar (footer bar) in React Native Android apps with swipe-up gesture navigation.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
